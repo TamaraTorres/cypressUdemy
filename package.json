@@ -1,0 +1,14 @@
+{
+  "name": "cypressudemy",
+  "version": "1.0.0",
+  "description": "cypres udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "ng test"
+  },
+  "author": "TamaraTorres",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.2.0"
+  }
+}
