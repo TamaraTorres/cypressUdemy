@@ -3,5 +3,7 @@ Feature: EATestFeature
 
   Scenario: Test the login feature 
     Given I visit EA site
-    When I enter "admin" and "password" And I click login
-    Then I login as user Admin
+    When I enter And I click login
+      | user     | pass     |
+      | admin    | password |
+    Then I login with the user
