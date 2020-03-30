@@ -9,6 +9,10 @@
   "author": "TamaraTorres",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.2.0"
+    "cypress": "^4.2.0",
+    "cypress-cucumber-preprocessor": "^2.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }

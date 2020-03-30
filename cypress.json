@@ -1,4 +1,5 @@
 {
-    "baseUrl": "http://eaapp.somee.com/"
+    "baseUrl": "http://eaapp.somee.com/",
+    "testFiles": "**/*.feature"
 }
 
