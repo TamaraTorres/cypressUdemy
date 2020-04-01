@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://eaapp.somee.com/",
   "testFiles": "**",
-  "projectId": "YOUR ID"
+  "projectId": "YOUR ID",
+  "screenshotsFolder": "./screenshots"
 }

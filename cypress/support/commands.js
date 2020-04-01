@@ -30,3 +30,5 @@ Cypress.Commands.add("login", (userName, password) => {
     cy.get('#Password').type(password)
     cy.get('.btn').click({force:true})
  })
+
+ import 'cypress-file-upload';

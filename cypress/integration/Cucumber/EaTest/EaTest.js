@@ -1,5 +1,5 @@
-import {Given, Then ,When} from 'cypress-cucumber-preprocessor/steps'
-
+import { Given, Then ,When } from 'cypress-cucumber-preprocessor/steps'
+import { loginPage } from '../../../pages/ealoginpage'
 Given ('I visit EA site', () => {
     cy.visit('/')
 })
@@ -17,11 +17,14 @@ Given ('I visit EA site', () => {
 When (`I enter And I click login`, datatable =>{
     cy.contains("Login").click()
     datatable.hashes().forEach(row => {
-        cy.get('#UserName').type(row.user)
-        cy.get('#Password').type(row.pass)
+        //cy.get('#UserName').type(row.user)
+        //cy.get('#Password').type(row.pass)
        
+        //using the page class
+        loginPage.performLogin(row.user, row.pass)
     });
-    cy.get('.btn').click()
+   //cy.get('.btn').click()
+   loginPage.clickLoginButton()
 })
 
 Then ('I login with the user',()=> {
