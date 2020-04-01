@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://eaapp.somee.com/",
-    "testFiles": "**"
+  "baseUrl": "http://eaapp.somee.com/",
+  "testFiles": "**",
+  "projectId": "YOUR ID"
 }
-
