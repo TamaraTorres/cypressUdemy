@@ -1,6 +1,18 @@
 {
   "baseUrl": "http://eaapp.somee.com/",
+  "video":false,
   "testFiles": "**",
-  "projectId": "YOUR ID",
-  "screenshotsFolder": "./screenshots"
+  "projectId": "k73mhc",
+  "screenshotsFolder": "./screenshots",
+  "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    }
 }

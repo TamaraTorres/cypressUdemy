@@ -1,4 +1,6 @@
 context('API Sample Requests', function() { 
+    /*** 
+     * TO RUN these ones you will need to have json-server up and running 
     beforeEach("DELETE before create a new item on Json server", ()=>{
         cy.request({
             method:'DELETE',
@@ -8,35 +10,7 @@ context('API Sample Requests', function() {
             expect(x.body).to.be.empty
         })
     })
-    it("Get phrase of the day" , ()=>{
-        cy.request({
-            method:'GET',
-            url:'https://favqs.com/api/qotd'
-        }).then((response)=>{
-            expect(response.status).to.eq(200)
-            expect(response.body).to.have.all.keys('quote','qotd_date')
-        })
-        
-       
-        //example from Udemy for xhr
-       /* 
-        cy.visit('YOUR SITE/LOGIN')
-        cy.server()
-        cy.route({
-            method:'GET',
-            url:'your url'
-        }).as('yourItem')
-        //login in the site
-        cy.get('@yourItem').then((xhr)=>{
-            expect(xhr.status).to.eq(200)
-            expect(xhr.response.body.something).to.have.keys('key')
-        })
-
-        cy.get('@yourItem').its('response.body).should('have.property','property')
-        */
-
-    })
-    it("Test API for fake Rest Json server ", ()=>{
+     it("Test API for fake Rest Json server ", ()=>{
         cy.request("http://localhost:3000/posts/1").its('body').should('have.property','id')
     })
     it("Post New item on fake Json Server", ()=>{
@@ -69,4 +43,34 @@ context('API Sample Requests', function() {
         
         })
     })
+    */
+    it("Get phrase of the day" , ()=>{
+        cy.request({
+            method:'GET',
+            url:'https://favqs.com/api/qotd'
+        }).then((response)=>{
+            expect(response.status).to.eq(200)
+            expect(response.body).to.have.all.keys('quote','qotd_date')
+        })
+        
+       
+        //example from Udemy for xhr
+       /* 
+        cy.visit('YOUR SITE/LOGIN')
+        cy.server()
+        cy.route({
+            method:'GET',
+            url:'your url'
+        }).as('yourItem')
+        //login in the site
+        cy.get('@yourItem').then((xhr)=>{
+            expect(xhr.status).to.eq(200)
+            expect(xhr.response.body.something).to.have.keys('key')
+        })
+
+        cy.get('@yourItem').its('response.body).should('have.property','property')
+        */
+
+    })
+   
 })
